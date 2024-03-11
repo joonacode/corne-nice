@@ -17,21 +17,6 @@
             key-positions = <19 20>;
             layers = <0>;
         };
-
-        petik-satu {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <4 5>;
-        };
-
-        petik-dua {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <3 4>;
-        };
-
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <15 16>;
-        };
     };
 
     keymap {
