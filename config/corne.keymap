@@ -20,13 +20,6 @@
     };
 
     behaviors {
-        taplayer1: taplayer1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPLAYER1";
-            #binding-cells = <0>;
-            bindings = <&mo 1>;
-        };
-
         shift: shift {
             compatible = "zmk,behavior-sticky-key";
             label = "SHIFT";
@@ -78,7 +71,7 @@
             >;
         };
 
-        upper_layer {
+        raise_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -107,7 +100,7 @@
             >;
         };
 
-        layer_3 {
+        layer_media {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
