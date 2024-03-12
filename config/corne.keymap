@@ -54,19 +54,48 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT       &kp CARET             &kp AMPERSAND          &kp ASTERISK      &kp MINUS          &kp EQUAL     &kp BACKSLASH
-&kp LCTRL  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDER     &kp PIPE
-&kp LSHFT  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE    &kp PLUS           &kp QUESTION  &kp RIGHT_ALT
-                                          &kp LGUI      &mo 0         &sk LEFT_SHIFT    &sk RIGHT_ALT         &sl 2                  &kp BACKSPACE
+&kp TAB    &kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp PERCENT          &kp CARET       &kp AMPERSAND         &kp ASTERISK           &kp MINUS          &kp EQUAL      &kp BACKSLASH
+&kp LCTRL  &kp EQUAL        &kp GRAVE    &kp LESS_THAN     &kp GREATER_THAN   &kp SQT              &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp SEMICOLON  &kp PIPE
+&kp LSHFT  &trans           &sl 3        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QUESTION    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS           &kp QUESTION   &kp RIGHT_ALT
+                                         &kp LGUI          &mo 0              &sk LEFT_SHIFT       &sk RIGHT_ALT   &sl 2                 &kp BACKSPACE
             >;
         };
 
-        raise_layer {
+        layer_3 {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp GRAVE   &kp F1        &kp F2        &kp F3             &kp F4           &kp F5              &kp F6          &kp F7            &kp F8        &kp F9           &kp F10  &kp RIGHT_ALT
+&kp TILDE   &kp C_PREV    &kp C_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4        &kp LESS_THAN   &kp GREATER_THAN  &trans        &trans           &trans   &trans
+                                        &kp BACKSPACE      &mo 0            &kp TAB             &trans          &trans            &trans
+            >;
+
+            bindings = <
+&kp GRAVE   &kp F1        &kp F2        &kp F3             &kp F4           &kp F5              &kp F6          &kp F7            &kp F8        &kp F9           &kp F10  &kp RIGHT_ALT
+&kp TILDE   &kp C_PREV    &kp C_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4        &kp LESS_THAN   &kp GREATER_THAN  &trans        &trans           &trans   &trans
+                                        &kp BACKSPACE      &mo 0            &kp TAB             &trans          &trans            &trans
+            >;
+        };
+
+        layer_3 {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp GRAVE   &kp F1        &kp F2        &kp F3             &kp F4           &kp F5              &kp F6          &kp F7            &kp F8        &kp F9           &kp F10  &kp RIGHT_ALT
+&kp TILDE   &kp C_PREV    &kp C_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4        &kp LESS_THAN   &kp GREATER_THAN  &trans        &trans           &trans   &trans
+                                        &kp BACKSPACE      &mo 0            &kp TAB             &trans          &trans            &trans
+            >;
 
             bindings = <
 &kp GRAVE   &kp F1        &kp F2        &kp F3             &kp F4           &kp F5              &kp F6          &kp F7            &kp F8        &kp F9           &kp F10  &kp RIGHT_ALT
