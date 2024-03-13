@@ -91,50 +91,29 @@
         change_window1: change_window1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LSHIFT &kp LEFT_ALT &kp Q>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp Q>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
             label = "change_window1";
         };
 
         change_window2: change_window2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT &kp W>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
             label = "CHANGE_WINDOW2";
-        };
-
-        change_window3: change_window3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT &kp E>;
-            label = "CHANGE_WINDOW3";
-        };
-
-        change_window4: change_window4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT &kp R>;
-            label = "CHANGE_WINDOW4";
-        };
-
-        change_desktop1: change_desktop1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT &kp NUMBER_1>;
-            label = "CHANGE_DESKTOP1";
-        };
-
-        change_desktop2: change_desktop2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT &kp NUMBER_2>;
-            label = "CHANGE_DESKTOP2";
-        };
-
-        change_desktop3: change_desktop3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT &kp NUMBER_3>;
-            label = "CHANGE_DESKTOP3";
         };
     };
 
@@ -197,10 +176,10 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &trans  &change_desktop1  &change_desktop2  &change_desktop3  &trans  &trans
-&trans  &trans           &trans           &trans           &trans           &trans    &trans  &trans            &trans            &trans            &trans  &trans
-&trans  &trans           &trans           &trans           &trans           &trans    &trans  &trans            &trans            &trans            &trans  &trans
-                                          &trans           &trans           &trans    &trans  &trans            &trans
+&trans  &change_window1  &change_window2  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans  &trans  &trans    &kp A   &trans  &trans  &trans  &trans  &trans
+                                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
