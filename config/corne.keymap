@@ -115,6 +115,174 @@
 
             label = "CHANGE_WINDOW2";
         };
+
+        change_window3: change_window3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_WINDOW3";
+        };
+
+        change_window4: change_window4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_WINDOW4";
+        };
+
+        change_desktop1: change_desktop1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKTOP1";
+        };
+
+        change_deskrop2: change_deskrop2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKROP2";
+        };
+
+        moveapp_to_w1: moveapp_to_w1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_W1";
+        };
+
+        moveapp_to_w2: moveapp_to_w2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_W2";
+        };
+
+        moveapp_to_w3: moveapp_to_w3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_W3";
+        };
+
+        moveapp_to_w4: moveapp_to_w4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp F>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_W4";
+        };
+
+        moveapp_to_d1: moveapp_to_d1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_D1";
+        };
+
+        moveapp_to_d2: moveapp_to_d2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_D2";
+        };
+
+        moveapp_to_d3: moveapp_to_d3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVEAPP_TO_D3";
+        };
+
+        change_desktop3: change_desktop3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKTOP3";
+        };
     };
 
     keymap {
@@ -176,10 +344,10 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1  &change_window2  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans           &trans  &trans  &trans    &kp A   &trans  &trans  &trans  &trans  &trans
-                                          &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &trans  &change_desktop1  &change_deskrop2  &change_desktop3  &trans  &trans
+&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &trans    &trans  &trans            &trans            &trans            &trans  &trans
+&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans    &trans  &trans            &trans            &trans            &trans  &trans
+                                          &trans           &trans           &trans    &trans  &trans            &trans
             >;
         };
     };
