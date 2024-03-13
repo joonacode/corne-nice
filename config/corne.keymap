@@ -283,6 +283,20 @@
 
             label = "CHANGE_DESKTOP3";
         };
+
+        toggle_sticky_app: toggle_sticky_app {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp L>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "TOGGLE_STICKY_APP";
+        };
     };
 
     keymap {
@@ -344,9 +358,9 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &trans  &change_desktop1  &change_deskrop2  &change_desktop3  &trans  &trans
-&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &trans    &trans  &trans            &trans            &trans            &trans  &trans
-&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans    &trans  &trans            &trans            &trans            &trans  &trans
+&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &trans  &change_desktop1  &change_deskrop2  &change_desktop3    &trans  &trans
+&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &trans    &trans  &trans            &trans            &toggle_sticky_app  &trans  &trans
+&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans    &trans  &trans            &trans            &trans              &trans  &trans
                                           &trans           &trans           &trans    &trans  &trans            &trans
             >;
         };
