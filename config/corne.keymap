@@ -481,6 +481,30 @@
 
             label = "CTRLD";
         };
+
+        zz: zz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp Z &kp Z>;
+
+            label = "ZZ";
+        };
+
+        zt: zt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp Z &kp T>;
+
+            label = "ZT";
+        };
+
+        zb: zb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp Z &kp B>;
+
+            label = "ZB";
+        };
     };
 
     keymap {
@@ -569,10 +593,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &kp B   &kp W   &trans  &trans  &kp BACKSPACE
-&trans  &trans  &trans  &kp B   &kp W    &kp E     &trans  &ctrld  &ctrlu  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 0    &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &stab   &kp TAB  &zt      &trans          &ctrld          &ctrlu        &trans           &trans  &kp BACKSPACE
+&trans  &trans  &trans  &kp B   &kp E    &kp W    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &zb      &trans          &trans          &trans        &trans           &trans  &trans
+                        &trans  &to 0    &zz      &trans          &trans          &trans
             >;
         };
     };
