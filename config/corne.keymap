@@ -81,7 +81,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "VIM_TAP1";
             #binding-cells = <0>;
-            bindings = <&layertap 1>, <&mo 5>;
+            bindings = <&layertap 1>, <&layertap 5>, <&layertap 6>;
+        };
+
+        vim_tap2: vim_tap2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIM_TAP2";
+            #binding-cells = <0>;
+            bindings = <&lt 2 SPACE>, <&layertap 7>;
         };
     };
 
@@ -401,14 +408,6 @@
             label = "DAT";
         };
 
-        vyat: vyat {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp V &kp Y &kp A &kp T>;
-
-            label = "VYAT";
-        };
-
         vyap: vyap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -423,6 +422,46 @@
             bindings = <&macro_tap>, <&kp V &kp Y &kp O>;
 
             label = "VYO";
+        };
+
+        vyp: vyp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp V &kp Y &kp P>;
+
+            label = "VYP";
+        };
+
+        vdb: vdb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp V &kp D &kp P>;
+
+            label = "VDB";
+        };
+
+        ctrlu: ctrlu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LCTRL &kp U>;
+
+            label = "CTRLU";
+        };
+
+        ctrld: ctrld {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LCTRL &kp D>;
+
+            label = "CTRLD";
+        };
+
+        stab: stab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LEFT_SHIFT &kp TAB>;
+
+            label = "STAB";
         };
     };
 
@@ -440,7 +479,7 @@
 &kp TAB            &kp Q            &kp W            &kp E                  &kp R              &kp T        &kp Y      &kp U               &kp I         &kp O            &kp P                &kp BSPC
 &kp LCTRL          &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D           &hml LEFT_SHIFT F  &kp G        &kp H      &hmr RIGHT_SHIFT J  &hmr RCTRL K  &hmr LEFT_ALT L  &hmr RGUI SEMICOLON  &kp SQT
 &shift LEFT_SHIFT  &kp Z            &kp X            &kp C                  &kp V              &kp B        &kp N      &kp M               &kp COMMA     &kp DOT          &kp FSLH             &shift RIGHT_SHIFT
-                                                     &mt LEFT_ALT LEFT_GUI  &vim_tap1          &lt 4 RET    &kp LCTRL  &lt 2 SPACE         &layertap 3
+                                                     &mt LEFT_ALT LEFT_GUI  &vim_tap1          &lt 4 RET    &kp LCTRL  &vim_tap2           &layertap 3
             >;
         };
 
@@ -485,19 +524,37 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &trans  &change_desktop1  &change_deskrop2  &change_desktop3    &trans  &trans
-&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &trans    &trans  &trans            &trans            &toggle_sticky_app  &trans  &trans
-&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans    &trans  &trans            &trans            &trans              &trans  &trans
-                                          &trans           &trans           &trans    &trans  &trans            &trans
+&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &trans  &change_desktop1    &change_deskrop2  &change_desktop3    &trans  &trans
+&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &trans    &trans  &toggle_sticky_app  &trans            &toggle_sticky_app  &trans  &trans
+&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans    &trans  &trans              &trans            &trans              &trans  &trans
+                                          &trans           &trans           &trans    &trans  &trans              &trans
             >;
         };
 
         layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &caq    &cab    &cat    &trans  &trans
-&trans  &trans  &vyo    &vyat   &vyap   &trans    &trans  &ciq    &cib    &cit    &trans  &trans
+&trans  &trans  &vyap   &vyo    &vyp    &vdb      &trans  &ciq    &cib    &cit    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &daq    &dab    &dat    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &diq    &dib    &dit    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &ctrlu  &ctrld  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans   &trans    &trans  &trans  &trans
             >;
         };
     };
