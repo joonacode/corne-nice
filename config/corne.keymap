@@ -435,7 +435,7 @@
         vdb: vdb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp V &kp D &kp P>;
+            bindings = <&macro_tap>, <&kp V &kp D &kp B>;
 
             label = "VDB";
         };
@@ -569,8 +569,8 @@
 
         layer_7 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE
-&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &ctrld  &ctrlu  &trans  &trans  &trans
+&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &kp B   &kp W   &trans  &trans  &kp BACKSPACE
+&trans  &trans  &trans  &kp B   &kp W    &kp E     &trans  &ctrld  &ctrlu  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0    &trans    &trans  &trans  &trans
             >;
