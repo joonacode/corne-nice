@@ -552,7 +552,7 @@
         layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE
-&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &ctrlu  &ctrld  &trans  &trans  &trans
+&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &ctrld  &ctrlu  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0    &trans    &trans  &trans  &trans
             >;
