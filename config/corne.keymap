@@ -109,7 +109,7 @@
 
         shiftl {
             bindings = <&shift LEFT_SHIFT>;
-            key-positions = <16 15 14>;
+            key-positions = <40 37>;
         };
     };
 
