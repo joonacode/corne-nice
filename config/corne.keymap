@@ -541,8 +541,8 @@
 
             bindings = <
 &kp TAB    &kp EXCL   &kp AT     &kp HASH          &kp DLLR           &kp PRCNT            &kp CARET      &kp AMPS              &kp ASTRK              &kp MINUS  &kp EQUAL  &kp BSLH
-&kp LCTRL  &kp EQUAL  &kp GRAVE  &kp LESS_THAN     &kp GREATER_THAN   &kp SINGLE_QUOTE     &kp UNDER      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &kp COLON  &kp PIPE
-&kp LSHFT  &trans     &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QMARK      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans     &trans     &trans
+&kp LCTRL  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SINGLE_QUOTE     &kp UNDER      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &kp COLON  &kp PIPE
+&kp LSHFT  &trans     &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QMARK      &kp LESS_THAN         &kp GREATER_THAN       &trans     &trans     &trans
                                  &kp LGUI          &to 0              &kp LEFT_ALT         &shift RSHIFT  &layertap 3           &kp BACKSPACE
             >;
         };
