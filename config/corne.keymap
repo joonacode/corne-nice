@@ -81,7 +81,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "VIM_TAP1";
             #binding-cells = <0>;
-            bindings = <&layertap 1>, <&layertap 5>, <&layertap 6>;
+            bindings = <&layertap 1>, <&shift RIGHT_SHIFT>;
         };
 
         vim_tap2: vim_tap2 {
@@ -543,7 +543,7 @@
 &kp TAB    &kp EXCL   &kp AT     &kp HASH          &kp DLLR           &kp PRCNT            &kp CARET  &kp AMPS              &kp ASTRK              &kp MINUS  &kp EQUAL  &kp BSLH
 &kp LCTRL  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SINGLE_QUOTE     &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &kp COLON  &kp PIPE
 &kp LSHFT  &trans     &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QMARK  &kp LESS_THAN         &kp GREATER_THAN       &trans     &trans     &trans
-                                 &kp LGUI          &to 0              &kp RET              &trans     &shift RIGHT_SHIFT    &layertap 3
+                                 &kp LGUI          &to 0              &kp RET              &trans     &layertap 5           &layertap 3
             >;
         };
 
@@ -582,10 +582,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &caq    &cab    &cat    &trans  &kp BACKSPACE
-&trans  &trans  &vyap   &vyo    &vyp    &vdb      &trans  &ciq    &cib    &cit    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 0   &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &caq         &cab    &cat    &trans  &kp BACKSPACE
+&trans  &trans  &vyap   &vyo    &vyp    &vdb      &trans  &ciq         &cib    &cit    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans  &trans  &trans
+                        &trans  &to 0   &trans    &trans  &layertap 6  &trans
             >;
         };
 
