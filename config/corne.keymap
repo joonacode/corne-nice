@@ -97,6 +97,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_CONTROL>, <&shift LEFT_SHIFT>;
         };
+
+        deletelayer7: deletelayer7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DELETELAYER7";
+            #binding-cells = <0>;
+            bindings = <&lt 7 BACKSPACE>, <&kp BACKSPACE>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -535,7 +542,7 @@
 &kp TAB           &kp Q            &kp W            &kp F                &kp P              &kp B                &kp J    &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
 &kp LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                &kp M    &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp RIGHT_CONTROL
 &caps_word        &kp Z            &kp X            &kp C                &kp D              &kp V                &kp K    &kp H               &kp COMMA             &kp DOT           &kp FSLH          &kp BACKSPACE
-                                                    &lt 4 BACKSPACE      &vim_tap1          &shift LEFT_SHIFT    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
+                                                    &lt 4 BACKSPACE      &vim_tap1          &shift LEFT_SHIFT    &kp RET  &lt 2 SPACE         &deletelayer7
             >;
         };
 
