@@ -103,6 +103,8 @@
             label = "DELETELAYER7";
             #binding-cells = <0>;
             bindings = <&lt 7 BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <50>;
         };
     };
 
