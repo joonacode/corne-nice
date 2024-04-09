@@ -117,18 +117,23 @@
         };
 
         semicolon {
-            bindings = <&kp SEMICOLON>;
+            bindings = <&kp ESCAPE>;
             key-positions = <7 8>;
         };
 
         backtick {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp SEMICOLON>;
             key-positions = <8 9>;
         };
 
         capslock {
             bindings = <&caps_word>;
             key-positions = <4 7>;
+        };
+
+        bac {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <31 32>;
         };
     };
 
@@ -581,7 +586,7 @@
 &kp TAB    &kp EXCL   &kp AT     &kp HASH          &kp DLLR           &kp PRCNT            &kp CARET    &kp AMPS              &kp ASTRK              &kp MINUS  &kp PLUS   &kp BSLH
 &kp LCTRL  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SINGLE_QUOTE     &kp UNDER    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp COLON  &kp PIPE
 &kp LSHFT  &trans     &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QMARK    &kp LESS_THAN         &kp GREATER_THAN       &trans     &trans     &trans
-                                 &kp LGUI          &to 0              &kp RET              &layertap 6  &layertap 5           &layertap 3
+                                 &kp LGUI          &to 0              &kp RET              &layertap 5  &kp SPACE             &layertap 3
             >;
         };
 
@@ -620,10 +625,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &caq         &cab    &cat    &trans  &kp BACKSPACE
-&trans  &trans  &vyap   &vyo    &vyp    &vdb      &trans  &ciq         &cib    &cit    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans  &trans  &trans  &trans
-                        &trans  &to 0   &trans    &trans  &layertap 6  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &caq    &cab    &cat    &trans  &kp BACKSPACE
+&trans  &trans  &vyap   &vyo    &vyp    &vdb      &trans       &ciq    &cib    &cit    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 0   &trans    &layertap 6  &trans  &trans
             >;
         };
 
