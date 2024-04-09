@@ -116,24 +116,44 @@
             key-positions = <16 19>;
         };
 
-        semicolon {
+        escape {
             bindings = <&kp ESCAPE>;
             key-positions = <7 8>;
         };
 
-        backtick {
+        semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <8 9>;
         };
 
         capslock {
             bindings = <&caps_word>;
-            key-positions = <4 7>;
+            key-positions = <3 8>;
         };
 
         bac {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
+        };
+
+        k {
+            bindings = <&kp K>;
+            key-positions = <3 4>;
+        };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <26 27>;
+        };
+
+        v {
+            bindings = <&kp V>;
+            key-positions = <27 28>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <14 16>;
         };
     };
 
