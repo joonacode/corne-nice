@@ -108,7 +108,29 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        capsword {
+            bindings = <&shift LEFT_SHIFT>;
+            key-positions = <16 19>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <7 8>;
+        };
+
+        backtick {
+            bindings = <&kp GRAVE>;
+            key-positions = <8 9>;
+        };
+
+        capslock {
+            bindings = <&caps_word>;
+            key-positions = <4 7>;
+        };
+    };
 
     macros {
         change_window1: change_window1 {
@@ -541,10 +563,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W            &kp F                &kp P              &kp B                &kp J    &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
-&kp LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G                &kp M    &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp RIGHT_CONTROL
-&caps_word        &kp Z            &kp X            &kp C                &kp D              &kp V                &kp K    &kp H               &kp COMMA             &kp DOT           &kp FSLH          &kp BACKSPACE
-                                                    &lt 4 BACKSPACE      &vim_tap1          &shift LEFT_SHIFT    &kp RET  &lt 2 SPACE         &deletelayer7
+&kp TAB           &kp Q            &kp W            &kp F                &kp P              &kp B          &kp J    &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
+&kp LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp RIGHT_CONTROL
+&caps_word        &kp Z            &kp X            &kp C                &kp D              &kp V          &kp K    &kp H               &kp COMMA             &kp DOT           &kp FSLH          &kp BACKSPACE
+                                                    &lt 4 BACKSPACE      &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
             >;
         };
 
@@ -620,6 +642,15 @@
 &trans  &trans  &trans  &kp B   &kp E    &kp W    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans  &trans  &trans   &zb      &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &to 0    &zz      &trans          &trans          &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans         &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp BACKSPACE  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans         &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans         &kp SPACE  &kp ENTER    &trans  &trans  &trans
             >;
         };
     };
