@@ -118,7 +118,7 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
         };
 
         semicolon {
@@ -672,7 +672,7 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans         &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp ESCAPE     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp BACKSPACE  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans         &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
                         &trans         &kp SPACE  &kp ENTER    &trans  &trans  &trans
