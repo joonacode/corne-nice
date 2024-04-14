@@ -591,6 +591,62 @@
 
             label = "CIW";
         };
+
+        ctrl_h: ctrl_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp H>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CTRL_H";
+        };
+
+        ctrl_j: ctrl_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp J>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CTRL_J";
+        };
+
+        ctrl_k: ctrl_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp K>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CTRL_K";
+        };
+
+        ctrl_l: ctrl_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp L>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CTRL_L";
+        };
     };
 
     keymap {
@@ -652,10 +708,10 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans    &change_desktop1  &change_deskrop2    &change_desktop3  &change_desktop4    &trans  &kp BACKSPACE
-&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &trans    &trans            &toggle_sticky_app  &trans            &toggle_sticky_app  &trans  &trans
-&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans    &trans            &trans              &trans            &trans              &trans  &trans
-                                          &trans           &to 0            &trans    &trans            &trans              &trans
+&trans  &change_window1  &change_window2  &change_window3  &change_window4  &trans                &change_desktop1  &change_deskrop2  &change_desktop3  &change_desktop4  &trans  &kp BACKSPACE
+&trans  &moveapp_to_w1   &moveapp_to_w2   &moveapp_to_w3   &moveapp_to_w4   &toggle_sticky_app    &ctrl_h           &ctrl_j           &ctrl_k           &ctrl_l           &trans  &trans
+&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3   &trans           &trans                &trans            &trans            &trans            &trans            &trans  &trans
+                                          &trans           &to 0            &trans                &trans            &trans            &trans
             >;
         };
 
