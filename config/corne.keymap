@@ -718,8 +718,8 @@
         layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &caq    &cab    &cat    &trans  &kp BACKSPACE
-&trans  &trans  &vyap   &vyo    &vyp    &vdb      &caw         &ciq    &cib    &cit    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &ciw         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &vyap   &vyo    &vyp    &vdb      &ciw         &ciq    &cib    &cit    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &caw         &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0   &trans    &layertap 6  &mo 3   &trans
             >;
         };
