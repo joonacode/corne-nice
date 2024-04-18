@@ -576,12 +576,12 @@
             label = "CHANGE_DESKTOP4";
         };
 
-        caw: caw {
+        change_word: change_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp C &kp A &kp W>;
+            bindings = <&macro_tap>, <&kp C &kp W>;
 
-            label = "CAW";
+            label = "CHANGE_WORD";
         };
 
         ciw: ciw {
@@ -717,10 +717,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &caq    &cab    &cat    &trans  &kp BACKSPACE
-&trans  &trans  &vyap   &vyo    &vyp    &vdb      &ciw         &ciq    &cib    &cit    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &caw         &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 0   &trans    &layertap 6  &mo 3   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &caq    &cab    &cat    &trans  &kp BACKSPACE
+&trans  &trans  &vyap   &vyo    &vyp    &vdb      &ciw          &ciq    &cib    &cit    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &change_word  &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 0   &trans    &layertap 6   &mo 3   &trans
             >;
         };
 
