@@ -660,10 +660,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W            &kp F                &kp P              &kp B          &kp J    &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
-&kp LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp RIGHT_CONTROL
-&caps_word        &kp Z            &kp X            &kp C                &kp D              &kp V          &kp K    &kp H               &kp COMMA             &kp DOT           &kp FSLH          &kp BACKSPACE
-                                                    &lt 4 BACKSPACE      &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
+&kp TAB           &kp Q                &kp W            &kp F            &kp P              &kp B          &kp J    &kp L               &kp U             &kp Y             &kp SEMICOLON         &kp ESCAPE
+&kp LEFT_CONTROL  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RIGHT_GUI E  &hmr RIGHT_ALT I  &hmr RIGHT_CONTROL O  &kp RIGHT_CONTROL
+&caps_word        &kp Z                &kp X            &kp C            &kp D              &kp V          &kp K    &kp H               &kp COMMA         &kp DOT           &kp FSLH              &kp BACKSPACE
+                                                        &lt 4 BACKSPACE  &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
             >;
         };
 
