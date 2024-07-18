@@ -806,10 +806,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                &kp W            &kp F            &kp P              &kp B          &kp J    &kp L               &kp U            &kp Y             &kp SEMICOLON         &none
-&none  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LGUI S      &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RGUI E      &hmr RIGHT_ALT I  &hmr RIGHT_CONTROL O  &none
-&none  &kp Z                &kp X            &kp C            &kp D              &kp V          &kp K    &kp H               &kp COMMA        &kp DOT           &kp FSLH              &none
-                                             &lt 4 BACKSPACE  &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
+&none  &kp Q        &kp W            &kp F                &kp P              &kp B          &kp J    &kp L               &kp U                 &kp Y             &kp SEMICOLON  &none
+&none  &hml LGUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RGUI O    &none
+&none  &kp Z        &kp X            &kp C                &kp D              &kp V          &kp K    &kp H               &kp COMMA             &kp DOT           &kp FSLH       &none
+                                     &lt 4 BACKSPACE      &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
             >;
         };
 
@@ -854,10 +854,10 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1_mac  &change_window2_mac  &change_window3_mac  &change_window4_mac  &change_window5_mac    &change_desktop1  &change_deskrop2  &change_desktop3  &change_desktop4  &trans  &trans
-&trans  &moveapp_to_w1       &moveapp_to_w2       &move_app_prev_mac   &move_app_next_mac   &toggle_sticky_app     &ctrl_h           &ctrl_j           &ctrl_k           &ctrl_l           &trans  &trans
-&trans  &moveapp_to_d1       &moveapp_to_d2       &moveapp_to_d3       &trans               &trans                 &tmux_search      &tmux_prev        &tmux_next        &trans            &trans  &trans
-                                                  &trans               &to 0                &trans                 &trans            &trans            &trans
+&trans  &change_window1  &change_window2  &change_window3     &change_window4     &trans                &change_desktop1  &change_deskrop2  &change_desktop3  &change_desktop4  &trans  &trans
+&trans  &moveapp_to_w1   &moveapp_to_w2   &move_app_prev_mac  &move_app_next_mac  &toggle_sticky_app    &ctrl_h           &ctrl_j           &ctrl_k           &ctrl_l           &trans  &trans
+&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3      &trans              &trans                &tmux_search      &tmux_prev        &tmux_next        &trans            &trans  &trans
+                                          &trans              &to 0               &trans                &trans            &trans            &trans
             >;
         };
 
