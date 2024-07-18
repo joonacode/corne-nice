@@ -777,6 +777,22 @@
 
             label = "TMUX_PREV";
         };
+
+        tmux_search: tmux_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp S>;
+
+            label = "TMUX_SEARCH";
+        };
     };
 
     keymap {
@@ -790,10 +806,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q                &kp W            &kp F            &kp P              &kp B          &kp J    &kp L               &kp U            &kp Y             &kp SEMICOLON         &kp ESCAPE
-&kp LEFT_CONTROL  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LGUI S      &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RGUI E      &hmr RIGHT_ALT I  &hmr RIGHT_CONTROL O  &kp RIGHT_CONTROL
-&caps_word        &kp Z                &kp X            &kp C            &kp D              &kp V          &kp K    &kp H               &kp COMMA        &kp DOT           &kp FSLH              &kp BACKSPACE
-                                                        &lt 4 BACKSPACE  &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
+&none  &kp Q                &kp W            &kp F            &kp P              &kp B          &kp J    &kp L               &kp U            &kp Y             &kp SEMICOLON         &none
+&none  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LGUI S      &hml LEFT_SHIFT T  &lt 8 G        &kp M    &hmr RIGHT_SHIFT N  &hmr RGUI E      &hmr RIGHT_ALT I  &hmr RIGHT_CONTROL O  &none
+&none  &kp Z                &kp X            &kp C            &kp D              &kp V          &kp K    &kp H               &kp COMMA        &kp DOT           &kp FSLH              &none
+                                             &lt 4 BACKSPACE  &vim_tap1          &key_repeat    &kp RET  &lt 2 SPACE         &lt 7 BACKSPACE
             >;
         };
 
@@ -805,10 +821,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL   &kp AT     &kp HASH          &kp DLLR           &kp PRCNT            &kp CARET    &kp AMPS              &kp ASTRK              &kp MINUS  &kp PLUS   &kp BSLH
-&kp LCTRL  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SINGLE_QUOTE     &kp UNDER    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp COLON  &kp PIPE
-&kp LSHFT  &trans     &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QMARK    &kp LESS_THAN         &kp GREATER_THAN       &trans     &trans     &trans
-                                 &kp LGUI          &to 0              &kp RET              &layertap 5  &kp SPACE             &kp BACKSPACE
+&trans  &kp EXCL   &kp AT     &kp HASH          &kp DLLR           &kp PRCNT            &kp CARET    &kp AMPS              &kp ASTRK              &kp MINUS      &kp PLUS   &trans
+&trans  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SINGLE_QUOTE     &kp UNDER    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp COLON  &trans
+&trans  &kp GRAVE  &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &kp QMARK    &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH  &kp PIPE   &trans
+                              &kp LGUI          &to 0              &kp RET              &layertap 5  &kp SPACE             &kp BACKSPACE
             >;
         };
 
@@ -820,34 +836,34 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCLAMATION  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0    &kp PRINTSCREEN  &kp CARET       &kp DOLLAR    &kp PAGE_DOWN    &kp PAGE_UP  &kp BACKSPACE
-&trans  &trans           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS       &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans       &trans
-&trans  &trans           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &kp K_COPY       &kp K_PASTE     &trans        &trans           &trans       &trans
-                                       &kp LGUI      &to 0         &kp SPACE       &trans           &trans          &trans
+&trans  &kp EXCLAMATION  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0         &kp PRINTSCREEN  &kp CARET       &kp DOLLAR    &kp PAGE_DOWN    &kp PAGE_UP  &trans
+&trans  &kp TAB          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp C_VOLUME_UP      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans       &trans
+&trans  &stab            &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOLUME_DOWN    &kp K_COPY       &kp K_PASTE     &trans        &trans           &trans       &trans
+                                       &kp LGUI      &to 0         &kp SPACE            &trans           &trans          &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&kp GRAVE   &kp F1        &kp F2        &kp F3             &kp F4           &kp F5              &kp F6     &kp F7                &kp F8                &kp F9  &kp F10  &kp BACKSPACE
-&kp C_PREV  &kp C_NEXT    &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &kp SLASH  &kp LEFT_BRACE        &kp RIGHT_BRACE       &trans  &trans   &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4        &kp GRAVE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans   &trans
-                                        &trans             &to 0            &trans              &trans     &trans                &trans
+&trans  &kp F1        &kp F2        &kp F3             &kp F4           &kp F5              &kp F6     &kp F7                &kp F8                &kp F9   &kp F10  &trans
+&trans  &bt BT_CLR    &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &kp SLASH  &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp F11  &kp F12  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4        &kp GRAVE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans   &trans   &trans
+                                    &trans             &to 0            &trans              &trans     &trans                &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &change_window1_mac  &change_window2_mac  &change_window3_mac  &change_window4_mac  &change_window5_mac    &change_desktop1  &change_deskrop2  &change_desktop3  &change_desktop4  &trans  &kp BACKSPACE
+&trans  &change_window1_mac  &change_window2_mac  &change_window3_mac  &change_window4_mac  &change_window5_mac    &change_desktop1  &change_deskrop2  &change_desktop3  &change_desktop4  &trans  &trans
 &trans  &moveapp_to_w1       &moveapp_to_w2       &move_app_prev_mac   &move_app_next_mac   &toggle_sticky_app     &ctrl_h           &ctrl_j           &ctrl_k           &ctrl_l           &trans  &trans
-&trans  &moveapp_to_d1       &moveapp_to_d2       &moveapp_to_d3       &trans               &trans                 &trans            &tmux_prev        &tmux_next        &trans            &trans  &trans
+&trans  &moveapp_to_d1       &moveapp_to_d2       &moveapp_to_d3       &trans               &trans                 &tmux_search      &tmux_prev        &tmux_next        &trans            &trans  &trans
                                                   &trans               &to 0                &trans                 &trans            &trans            &trans
             >;
         };
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &caq    &cab    &cat    &trans  &kp BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &caq    &cab    &cat    &trans  &trans
 &trans  &trans  &vyap   &vyo    &vyp    &vdb      &ciw          &ciq    &cib    &cit    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &change_word  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0   &trans    &layertap 6   &mo 3   &trans
@@ -856,7 +872,7 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &daq    &dab    &dat    &trans  &kp BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &daq    &dab    &dat    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &diq    &dib    &dit    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0   &trans    &trans  &trans  &trans
