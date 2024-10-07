@@ -793,6 +793,38 @@
 
             label = "TMUX_SEARCH";
         };
+
+        tmux_previous_session: tmux_previous_session {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp LEFT_PARENTHESIS>;
+
+            label = "TMUX_PREVIOUS_SESSION";
+        };
+
+        tmux_next_session: tmux_next_session {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp RIGHT_PARENTHESIS>;
+
+            label = "TMUX_NEXT_SESSION";
+        };
     };
 
     keymap {
@@ -854,10 +886,10 @@
 
         layer_4 {
             bindings = <
-&trans  &change_window1  &change_window2  &change_window3     &change_window4     &trans                &change_desktop1  &change_deskrop2  &change_desktop3  &change_desktop4  &trans  &trans
-&trans  &moveapp_to_w1   &moveapp_to_w2   &move_app_prev_mac  &move_app_next_mac  &toggle_sticky_app    &ctrl_h           &ctrl_j           &ctrl_k           &ctrl_l           &trans  &trans
-&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3      &trans              &trans                &tmux_search      &tmux_prev        &tmux_next        &trans            &trans  &trans
-                                          &trans              &to 0               &trans                &trans            &trans            &trans
+&trans  &change_window1  &change_window2  &change_window3     &change_window4     &trans                &change_desktop1        &change_deskrop2    &change_desktop3  &change_desktop4  &trans  &trans
+&trans  &moveapp_to_w1   &moveapp_to_w2   &move_app_prev_mac  &move_app_next_mac  &toggle_sticky_app    &ctrl_h                 &ctrl_j             &ctrl_k           &ctrl_l           &trans  &trans
+&trans  &moveapp_to_d1   &moveapp_to_d2   &moveapp_to_d3      &trans              &trans                &tmux_search            &tmux_prev          &tmux_next        &trans            &trans  &trans
+                                          &trans              &to 0               &trans                &tmux_previous_session  &tmux_next_session  &trans
             >;
         };
 
